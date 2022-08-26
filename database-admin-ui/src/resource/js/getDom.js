@@ -17,4 +17,4 @@ const modalEdit = document.querySelector(".modal-edit");
 
 // **
 const btnModalEdit = document.querySelector("btn-modal-edit");
-const url = '/database-admin-ui/';
+const url = '/database/database-admin-ui/';

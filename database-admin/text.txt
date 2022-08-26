@@ -20,13 +20,25 @@ kode_guru
 -----------------------------
 
 
-Data pembayaran
+Data pembayaran Umum
 -----------------------------
-id_siswa
-kelas
-Tgl. Bayar
-Jumlah
-Keterangan
+id_siswa -
+nama -
+kelas -
+Total --
+Kurang --
+Action --
+-----------------------------
+
+Data pembayaran Spesifik
+-----------------------------
+id_siswa - ---
+kelas -
+Bulan --
+Tgl. Bayar ---
+Jumlah ---
+Keterangan --
+Action --
 -----------------------------
 
 
