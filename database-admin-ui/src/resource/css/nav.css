@@ -1,0 +1,130 @@
+:root {
+  --satu: #232323;
+  --dua: #9C9EFE;
+  --tiga: #F9F9F9;
+  --transition1: .3s ease-in-out;
+  --transition2: .1s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  font-family: albert;
+}
+
+body.active {
+  margin-left: calc(155.938px - 65px);
+}
+
+@font-face {
+  font-family: arima;
+  src: url(../../font/Arima-Regular.ttf);
+}
+
+@font-face {
+  font-family: albert;
+  src: url(../../font/AlbertSans-Regular.ttf);
+}
+
+.nav {
+  background-color: var(--dua);
+  height: 100vh;
+  position: fixed;
+  left: 0; top: 0;
+  transition: var(--transition1);
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  z-index: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 1rem;
+  transition: var(--transition1);
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  background-color: var(--satu);
+  border-radius: 6px;
+  z-index: 1;
+  transform-origin: 0 0;
+  transition: var(--transition2);
+}
+
+.hamburger span:nth-child(1).active {
+  transform-origin: 0 100;
+  transform: rotate(45deg);
+  background-color: #fff;
+}
+.hamburger span:nth-child(2).active {
+  opacity: 0;
+}
+
+.hamburger span:nth-child(3).active {
+  transform-origin: 0 0;
+  transform: rotate(-45deg) translate(-5px, 2px);
+  background-color: #fff;
+}
+
+.hamburger.active {
+  background-color: var(--satu);
+}
+
+.hamburger:hover span {
+  background-color: white;
+}
+
+.nav-ul {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.nav-link {
+  display: flex;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--satu);
+  font-weight: bold;
+  align-items: center;
+  padding: 1rem;
+  transition: var(--transition2);
+}
+
+.nav-link.act {
+  background-color: var(--satu);
+  color: white;
+}
+
+.nav-link:hover {
+  background-color: var(--satu);
+  color: white;
+}
+
+.nav-link .bi {
+  font-size: 1.75rem;
+  transition: var(--transition2);
+}
+
+.nav-link p {
+  display: none;
+  transition: var(--transition2);
+}
+
+.nav-link p.active {
+  display: block;
+}

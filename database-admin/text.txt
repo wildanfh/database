@@ -1,0 +1,44 @@
+Data siswa
+-----------------------------
+id_siswa
+id_kelas
+nama
+jenis_kelamin
+tempat_lahir
+tanggal_lahir
+sekolah_asal
+alamat
+nomor_telepon
+-----------------------------
+
+
+Data kelas
+-----------------------------
+id_kelas
+nama_kelas
+kode_guru
+-----------------------------
+
+
+Data pembayaran
+-----------------------------
+id_siswa
+kelas
+Tgl. Bayar
+Jumlah
+Keterangan
+-----------------------------
+
+
+Data admin
+-----------------------------
+id
+username
+password
+-----------------------------
+
+
+
+
+
+

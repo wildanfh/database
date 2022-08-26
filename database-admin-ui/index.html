@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>students</title>
+  <link rel="stylesheet" href="src/resource/css/nav.css">
+  <link rel="stylesheet" href="src/resource/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <nav class="nav"></nav>
+  <script src="src/resource/js/navbar.js"></script>
+
+  <header>
+    <h1 class="title">Dashboard</h1>
+    <div class="btn-container">
+      <div class="input-container">
+        <button class="btn-header a c"><i class="bi bi-search"></i></button>
+        <input type="text" placeholder="Search" class="input">
+      </div>
+      <a href="#" class="btn-header a aa"><i class="bi bi-search"></i> Search</a>
+      <a href="#" class="btn-header b"><i class="bi bi-plus"></i> Add New</a>
+    </div>
+  </header>
+
+  <section class="table-container">
+    <table class="table">
+      <thead>
+        <tr class="row-first">
+          <td class="col"><h2 class="table-title">Applications</h2></td>
+        </tr>
+        <tr class="row-head">
+          <th class="col-head"><p class="p-head">id</p></th>
+          <th class="col-head"><p class="p-head">kelas</p></th>
+          <th class="col-head"><p class="p-head">nama</p></th>
+          <th class="col-head"><p class="p-head">jenis kelamin</p></th>
+          <th class="col-head"><p class="p-head">tempat lahir</p></th>
+          <th class="col-head"><p class="p-head">tanggal lahir</p></th>
+          <th class="col-head"><p class="p-head">sekolah asal</p></th>
+          <th class="col-head alamat"><p class="p-head">alamat</p></th>
+          <th class="col-head"><p class="p-head">no handphone</p></th>
+          <th class="col-head last"><p class="p-head">action</p></th>
+        </tr>
+      </thead>
+      <tbody class="tbody">
+        
+      </tbody>
+    </table>
+  </section>
+
+  <section id="myModal" class="modal-container">
+    <div class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-right">
+      </div>
+      <h1 class="modal-title">Tambah Data Murid</h1>
+      <form class="form-modal">
+        <label for="nama" class="label-modal">Nama :</label>
+        <input type="text" class="input-modal" id="nama" placeholder="Nama Lengkap" required>
+
+        <label for="kelas" class="label-modal">Kelas :</label>
+        <select name="Kelas" id="kelas" class="input-modal" required>
+          <option value="B001" class="option">B001</option>
+          <option value="B002" class="option">B002</option>
+          <option value="B003" class="option">B003</option>
+          <option value="B004" class="option">B004</option>
+          <option value="B005" class="option">B005</option>
+          <option value="B006" class="option">B006</option>
+        </select>
+
+        <label for="jenis_kelamin" class="label-modal">Jenis Kelamin :</label>
+        <select name="Jenis Kelamin" id="jenis_kelamin" class="input-modal" required>
+          <option value="laki-laki" class="option">Laki-laki</option>
+          <option value="perempuan" class="option">Perempuan</option>
+        </select>
+
+        <label for="tempat_lahir" class="label-modal">Tempat Lahir :</label>
+        <input type="text" class="input-modal" id="tempat_lahir" placeholder="Tempat Lahir" required>
+
+        <label for="tanggal_lahir" class="label-modal">Tanggal Lahir :</label>
+        <input type="date" class="input-modal" id="tanggal_lahir" required>
+
+        <label for="sekolah_asal" class="label-modal">Sekolah Asal :</label>
+        <input type="text" class="input-modal" id="sekolah_asal" placeholder="Sekolah Asal" required>
+
+        <label for="alamat" class="label-modal">Alamat :</label>
+        <input type="text" class="input-modal" id="alamat" placeholder="Alamat" required>
+
+        <label for="no_handphone" class="label-modal">No Handphone :</label>
+        <input type="text" class="input-modal" id="no_handphone" placeholder="No Handphone" required>
+        <p class="btn-modal">Submit</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="myModalEdit" class="modal-container">
+    <div class="modal-edit">
+      <span class="close-edit">&times;</span>
+      <h1 class="modal-title-edit">Ubah Data Murid</h1>
+    </div>
+  </section>
+
+  <script src="src/resource/js/nav.js"></script>
+  <script src="src/resource/js/getDom.js"></script>
+  <script src="src/resource/js/functionIndex.js"></script>
+  <script src="src/resource/js/index.js"></script>
+</body>
+
+</html>

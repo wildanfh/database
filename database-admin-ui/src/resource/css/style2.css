@@ -1,0 +1,24 @@
+.reg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+hr {
+  width: 5rem;
+  height: 1px;
+  border-bottom: 1px solid var(--satu);
+}
+
+.link {
+  text-decoration: none;
+  color: var(--satu);
+  border-bottom: 1px solid transparent;
+  transition: var(--transition1);
+}
+
+.link:hover {
+  border-bottom: 1px solid var(--satu);
+}
