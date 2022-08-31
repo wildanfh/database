@@ -6,7 +6,7 @@ nav.innerHTML = `<button class="hamburger">
 </button>
 
 <ul class="nav-ul">
-<a href="#" class="nav-link act">
+<a href="index.html" class="nav-link act">
   <i class="bi bi-house"></i>
   <p class="">Beranda</p>
 </a>
@@ -18,8 +18,8 @@ nav.innerHTML = `<button class="hamburger">
   <i class="bi bi-folder2-open"></i>
   <p>Arsip</p>
 </a>
-<a href="#" class="nav-link">
+<a href="finance.html" class="nav-link">
   <i class="bi bi-wallet"></i>
   <p>Keuangan</p>
 </a>
-</ul>`
+</ul>`;

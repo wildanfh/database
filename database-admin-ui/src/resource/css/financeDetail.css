@@ -1,0 +1,8 @@
+.btn-detail {
+  background-color: var(--tujuh);
+  border: 1px solid var(--tujuh);
+}
+
+.btn-detail:hover {
+  color: var(--tujuh);
+}

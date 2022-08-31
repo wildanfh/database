@@ -1,0 +1,132 @@
+:root {
+  --satu: #232323;
+  --dua: #9C9EFE;
+  --tiga: #F9F9F9;
+  --empat: #f9f1fd;
+  --lima: #89CFFD;
+  --enam: #F37878;
+  --tujuh: #a2be77;
+  --transition1: .3s ease-in-out;
+  --transition2: .1s ease-in-out;
+}
+
+body {
+  padding-left: 65px;
+}
+
+header {
+  height: 10vh;
+  background-color: var(--tiga);
+  padding: 1rem 2rem;
+  width: calc(100% - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--dua);
+  box-sizing: border-box;
+}
+
+.title {
+  color: var(--satu);
+  font-weight: 600;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-header {
+  background-color: limegreen;
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  display: flex;
+  gap: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid;
+  letter-spacing: 1.5px;
+  transition: var(--transition1);
+}
+
+.btn-header.a {
+  color: var(--satu);
+  background-color: var(--tiga);
+  border-color: #d9d9d9;
+}
+
+.btn-header.a:hover {
+  color: var(--tiga);
+  background-color: var(--dua);
+  border-color: var(--dua);
+}
+
+.input-container {
+  display: none;
+}
+
+.input-container.flex {
+  display: flex;
+}
+
+.btn-header.aa.flex {
+  display: none;
+}
+
+.table-container {
+  background-color: var(--empat);
+  min-height: 90vh;
+  display: flex;
+}
+
+.table {
+  margin:  auto;
+  background-color: var(--tiga);
+  border-radius: 0.6rem;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px -8px #2323233f;
+  max-width: 50%;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.row, .row-head {
+  border-top: 1px solid #23232310;
+}
+
+.col, .col-head {
+  padding: 1rem;
+}
+
+.col-head {
+  background-color: var(--empat);
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: .875rem;
+}
+
+.col-head.action {
+  color: var(--empat);
+}
+
+.btn-detail {
+  background-color: var(--dua);
+  color: var(--tiga);
+  padding: .3rem .9rem;
+  font-size: .875rem;
+  border-radius: .25rem;
+  text-decoration: none;
+  border: 1px solid var(--dua);
+  transition: var(--transition1);
+  font-weight: 600;
+  letter-spacing: .8px;
+}
+
+.btn-detail:hover {
+  background-color: transparent;
+  color: var(--dua);
+}

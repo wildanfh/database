@@ -11,7 +11,19 @@ btn.addEventListener('click', function () {
 
 const navlinks = document.querySelectorAll('.nav-link');
 navlinks.forEach(navlink => {
-  navlink.addEventListener('click', function(a) {
+
+  const uri = document.location.href;
+  const myArr = uri.split("/");
+  const file = myArr.length;
+
+  const href = navlink.getAttribute("href");
+  if (href == myArr[file - 1]) {
+    let current = document.getElementsByClassName("act")[0];
+    current.className = current.className.replace(" act", "");
+    this.className += " act";
+  }
+
+  navlink.addEventListener('click', function (a) {
     let current = document.getElementsByClassName("act")[0];
     current.className = current.className.replace(" act", "");
     this.className += " act";

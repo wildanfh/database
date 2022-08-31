@@ -12,9 +12,15 @@ const users = require('./api/users');
 const UsersService = require('./services/postgres/UsersServices');
 const UsersValidator = require('./validator/users');
 
+// finance
+const finances = require('./api/finances');
+const FinancesServices = require('./services/postgres/FinancesServices');
+const financesValidator = require('./validator/finance');
+
 const init = async () => {
   const usersService = new UsersService();
   const studentsService = new StudentsService();
+  const financesServices = new FinancesServices();
 
   const server = Hapi.server({
     port: process.env.PORT,
@@ -39,6 +45,13 @@ const init = async () => {
       options: {
         service: studentsService,
         validator: StudentsValidator,
+      },
+    },
+    {
+      plugin: finances,
+      options: {
+        service: financesServices,
+        validator: financesValidator,
       },
     },
   ]);
