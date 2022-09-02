@@ -6,3 +6,102 @@
 .btn-detail:hover {
   color: var(--tujuh);
 }
+
+table {
+  border-collapse: collapse;
+}
+
+.tbody {
+  height: 500px;
+  display: block;
+  overflow-y: auto;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.473);
+  z-index: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.modal {
+  min-width: 40vw;
+  background-color: var(--tiga);
+  height: 40vh;
+  border-radius: .5rem;
+  position: relative;
+  padding: 1rem;
+  animation: fade-in .5s forwards ease-in;
+}
+
+.close, .close-edit {
+  position: absolute;
+  right: 0;
+  padding-right: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--satu);
+  transition: var(--transition2);
+}
+
+.close:hover, .close-edit {
+  color: #535353;
+}
+
+.modal-title, .modal-title-edit {
+  color: var(--satu);
+  font-size: 1.75rem;
+  padding: 1rem;
+}
+
+.form-modal {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin: auto;
+}
+
+.label-modal {
+  margin-top: .5rem;
+  display: block;
+}
+
+.input-modal, .input-modal-edit {
+  margin-top: .25rem;
+  height: 1.75rem;
+  padding-left: .5rem;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid var(--tujuh);
+  border-radius: none;
+}
+
+.input-modal:focus, .input-modal-edit:focus {
+  border: none;
+  border-top: 2px solid var(--tujuh);
+}
+
+.btn-modal, .btn-modal-edit {
+  margin-top: 2rem;
+  padding: .5rem;
+  background-color: var(--tujuh);
+  border: 2px solid var(--tujuh);
+  border-radius: 3px;
+  font-weight: bold;
+  color: var(--tiga);
+  letter-spacing: 1px;
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition1);
+}
+
+.btn-modal:hover, .btn-modal-edit:hover {
+  background-color: transparent;
+  color: var(--tujuh);
+}
+

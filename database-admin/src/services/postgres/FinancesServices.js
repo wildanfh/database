@@ -11,10 +11,7 @@ class FinancesServices {
     this._service = service;
   }
 
-  async addFinance({ tgl, jumlah }) {
-    const { id } = request.params;
-    this._service.getStudentById(id);
-
+  async addFinance({ id, tgl, jumlah }) {
     const query = {
       text: "INSERT INTO finances VALUES($1, $2, $3) RETURNING id_siswa",
       values: [id, tgl, jumlah],

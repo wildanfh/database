@@ -4,13 +4,17 @@ class FinancesHandler {
   constructor(service, validator) {
     this._service = service;
     this._validator = validator;
+
+    this.postFinanceHandler = this.postFinanceHandler.bind(this);
+    this.getFinanceByIdHandler = this.getFinanceByIdHandler.bind(this);
   }
 
   async postFinanceHandler(request, h) {
     try {
       this._validator.validateFinancePayload(request.payload);
-      const { tgl, jumlah } = request.payload;
-      const financeId = await this._service.addFinance({ tgl, jumlah });
+      const { id, tgl, jumlah } = request.payload;
+      console.log(tgl);
+      const financeId = await this._service.addFinance({ id, tgl, jumlah });
 
       const response = h.response({
         status: "success",
@@ -19,6 +23,7 @@ class FinancesHandler {
           financeId,
         },
       });
+      return response;
     } catch (error) {
       if (error instanceof ClientError) {
         const response = h.response({
@@ -42,8 +47,9 @@ class FinancesHandler {
   async getFinanceByIdHandler(request, h) {
     try {
       const { id } = request.params;
-
+      
       const finance = await this._service.getFinanceById(id);
+      console.log(finance);
       return {
         status: "success",
         data: {

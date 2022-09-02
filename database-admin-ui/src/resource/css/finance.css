@@ -70,6 +70,40 @@ header {
   display: flex;
 }
 
+.input {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #d9d9d9;
+  border-left: none;
+  padding-left: 1rem;
+  transition: var(--transition1);
+  outline: none;
+}
+
+input::placeholder {
+  letter-spacing: 1.5px;
+  font-family: albert;
+}
+
+input:focus {
+  border: 1px solid var(--dua);
+  border-left: none;
+}
+
+.btn-header.c {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: none;
+}
+
+.btn-header.c.fokus {
+  color: var(--tiga);
+  background-color: var(--dua);
+  border-color: var(--dua);
+}
+
 .btn-header.aa.flex {
   display: none;
 }
@@ -129,4 +163,8 @@ header {
 .btn-detail:hover {
   background-color: transparent;
   color: var(--dua);
+}
+
+.col.kurang {
+  color: rgb(233, 59, 59);
 }

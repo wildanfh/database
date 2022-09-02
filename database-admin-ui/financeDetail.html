@@ -29,33 +29,64 @@
 
   <div class="table-container">
     <table class="table">
-      <tr>
+      <thead class="thead">
+        <tr>
           <td class="col table-title">Detail Pembayaran</td>
-      </tr>
-      <tr>
-        <td class="col">Id Siswa : stud_21H154WO</td>
-      </tr>
-      <tr>
-        <td class="col">Kelas : B002</td>
-      </tr>
-      <tr class="row-head">
-        <th class="col-head">Bulan</th>
-        <th class="col-head">Tgl Bayar</th>
-        <th class="col-head">Jumlah</th>
-        <th class="col-head">Keterangan</th>
-        <th class="col-head action"></th>
-      </tr>
-      <tbody>
-        <tr class="row">
-          <td class="col date">Januari 2022</td>
-          <td class="col">02-2022-14</td>
-          <td class="col">1.000.000</td>
-          <td class="col ket"></td>
-          <td class="col"><a href="#" class="btn-detail">Bayar</a></td>
         </tr>
-      </tbody>
+        <thead class="data-person">
+        </thead>
+        <tr class="row-head">
+          <td>
+            <table>
+              <tr>
+                <th class="col-head">Bulan</th>
+                <th class="col-head">Tgl Bayar</th>
+                <th class="col-head">Jumlah</th>
+                <th class="col-head">Keterangan</th>
+                <th class="col-head action">action</th>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </thead>
+      <tr>
+        <td>
+          <div class="scroll-table">
+            <table class="tbody">
+              <tr class="row">
+                <td class="col date">Januari 2022</td>
+                <td class="col">02-2022-14</td>
+                <td class="col">1.000.000</td>
+                <td class="col ket"></td>
+                <td class="col"><a href="#" class="btn-detail">Bayar</a></td>
+              </tr>
+            </table>
+          </div>
+        </td>
+      </tr>
     </table>
   </div>
+
+  <section id="myModal" class="modal-container">
+    <div class="modal">
+      <span class="close">&times;</span>
+      <div class="modal-right">
+      </div>
+      <h1 class="modal-title">Konfirmasi Pembayaran</h1>
+      <form class="form-modal">
+        <label for="id" class="label-modal">Id Siswa :</label>
+        <input type="text" class="input-modal" id="id" placeholder="Id Siswa" required>
+
+        <label for="tanggal_bayar" class="label-modal">Tanggal Bayar :</label>
+        <input type="date" class="input-modal" id="tanggal_bayar" required>
+
+        <label for="jumlah" class="label-modal">Jumlah :</label>
+        <input type="text" class="input-modal" id="jumlah" placeholder="Rp." required>
+
+        <p class="btn-modal">Submit</p>
+      </form>
+    </div>
+  </section>
 
   <script src="src/resource/js/nav.js"></script>
   <script src="src/resource/js/date.js"></script>
@@ -65,4 +96,5 @@
 </html>
 
 </body>
+
 </html>
