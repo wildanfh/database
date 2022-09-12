@@ -1,6 +1,17 @@
 .btn-detail {
   background-color: var(--tujuh);
   border: 1px solid var(--tujuh);
+  padding: .5rem 1rem;
+  font-size: .875rem;
+  display: flex;
+  gap: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid;
+  letter-spacing: 1.5px;
+  transition: var(--transition1);
+  cursor: pointer;
 }
 
 .btn-detail:hover {
@@ -31,7 +42,7 @@ table {
 .modal {
   min-width: 40vw;
   background-color: var(--tiga);
-  height: 40vh;
+  height: 50vh;
   border-radius: .5rem;
   position: relative;
   padding: 1rem;
@@ -103,5 +114,33 @@ table {
 .btn-modal:hover, .btn-modal-edit:hover {
   background-color: transparent;
   color: var(--tujuh);
+}
+
+.col-khusus {
+  width: 100%;
+}
+
+.col.ket {
+  color: var(--tujuh);
+}
+
+.col.kur {
+  color: var(--enam);
+}
+
+.col_bulan {
+  width: 120px;
+}
+
+.col_tgl {
+  width: 100px;
+}
+
+.col_jumlah {
+  width: 80px;
+}
+
+.col_ket {
+  width: 60px;
 }
 

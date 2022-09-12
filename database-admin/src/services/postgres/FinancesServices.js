@@ -11,10 +11,10 @@ class FinancesServices {
     this._service = service;
   }
 
-  async addFinance({ id, tgl, jumlah }) {
+  async addFinance({ bulan, id, tgl, jumlah }) {
     const query = {
-      text: "INSERT INTO finances VALUES($1, $2, $3) RETURNING id_siswa",
-      values: [id, tgl, jumlah],
+      text: "INSERT INTO finances VALUES($1, $2, $3, $4) RETURNING id_siswa",
+      values: [bulan, id, tgl, jumlah],
     };
 
     const result = await this._pool.query(query);
@@ -34,10 +34,10 @@ class FinancesServices {
     const result = await this._pool.query(query);
 
     if (!result.rows.length) {
-      throw new NotFoundError('Detail Pembayaran gagal ditambahkan');
+      throw new NotFoundError('Detail Pembayaran gagal ditemukan');
     }
 
-    return result.rows[0];
+    return result.rows;
   }
 };
 

@@ -4,6 +4,10 @@ exports.shorthands = undefined;
 
 exports.up = pgm => {
   pgm.createTable('finances', {
+    bulan: {
+      type: 'VARCHAR(50)',
+      notNull: true,
+    },
     id_siswa: {
       type: 'VARCHAR(50)',
       notNull: true,

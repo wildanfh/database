@@ -50,7 +50,7 @@ const logEvent = (e) => {
       pesan.innerHTML = data.message;
       if (data.status === 'success') {
         pesan.innerHTML = '';
-        document.location.href = '/database-admin-ui';
+        document.location.href = '/database/database-admin-ui';
       }
     })
     .catch(err => {

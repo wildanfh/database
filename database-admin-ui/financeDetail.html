@@ -24,6 +24,7 @@
         <input type="text" placeholder="Search" class="input">
       </div>
       <a href="#" class="btn-header a aa"><i class="bi bi-search"></i> Search</a>
+      <a class="btn-detail">Bayar</a>
     </div>
   </header>
 
@@ -36,14 +37,13 @@
         <thead class="data-person">
         </thead>
         <tr class="row-head">
-          <td>
-            <table>
-              <tr>
-                <th class="col-head">Bulan</th>
-                <th class="col-head">Tgl Bayar</th>
-                <th class="col-head">Jumlah</th>
-                <th class="col-head">Keterangan</th>
-                <th class="col-head action">action</th>
+          <td class="col-khusus">
+            <table class="col-khusus">
+              <tr class="col-khusus">
+                <th class="col-head col_bulan">Bulan</th>
+                <th class="col-head col_tgl">Tgl Bayar</th>
+                <th class="col-head col_jumlah">Jumlah</th>
+                <th class="col-head col_ket">Ket</th>
               </tr>
             </table>
           </td>
@@ -53,13 +53,13 @@
         <td>
           <div class="scroll-table">
             <table class="tbody">
-              <tr class="row">
+              <!-- <tr class="row">
                 <td class="col date">Januari 2022</td>
                 <td class="col">02-2022-14</td>
                 <td class="col">1.000.000</td>
                 <td class="col ket"></td>
-                <td class="col"><a href="#" class="btn-detail">Bayar</a></td>
-              </tr>
+                <td class="col"><a class="btn-detail">Bayar</a></td>
+              </tr> -->
             </table>
           </div>
         </td>
@@ -74,6 +74,10 @@
       </div>
       <h1 class="modal-title">Konfirmasi Pembayaran</h1>
       <form class="form-modal">
+
+        <label for="bulan_tahun" class="label-modal">Bulan :</label>
+        <input type="month" class="input-modal" id="bulan_tahun" required>
+
         <label for="id" class="label-modal">Id Siswa :</label>
         <input type="text" class="input-modal" id="id" placeholder="Id Siswa" required>
 
@@ -89,7 +93,6 @@
   </section>
 
   <script src="src/resource/js/nav.js"></script>
-  <script src="src/resource/js/date.js"></script>
   <script src="src/resource/js/financeDetail.js"></script>
 </body>
 

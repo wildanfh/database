@@ -23,6 +23,12 @@ const routes = (handler) => [
     method: 'POST',
     path: '/users/{username}/{password}',
     handler: handler.verifyUsernameAndPasswordHandler,
+    options: {
+      state: {
+        parse: true,
+        failAction: 'error',
+      }
+    }
   }
 ];
 

@@ -125,13 +125,20 @@ class UsersHandler {
     try {
       const { username = '', password } = request.params;
       const users = await this._service.verifyUsernameAndPassword({ username, password });
-
-      return {
+      const response = h.response({
         status: 'success',
         data: {
           users,
         }
-      }
+      })
+      .state('cookie', {account: username});
+      return response;
+      // return {
+      //   status: 'success',
+      //   data: {
+      //     users,
+      //   }
+      // }
     } catch (error) {
       if (error instanceof ClientError) {
         const response = h.response({

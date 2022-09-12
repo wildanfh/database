@@ -12,9 +12,8 @@ class FinancesHandler {
   async postFinanceHandler(request, h) {
     try {
       this._validator.validateFinancePayload(request.payload);
-      const { id, tgl, jumlah } = request.payload;
-      console.log(tgl);
-      const financeId = await this._service.addFinance({ id, tgl, jumlah });
+      const { bulan, id, tgl, jumlah } = request.payload;
+      const financeId = await this._service.addFinance({ bulan, id, tgl, jumlah });
 
       const response = h.response({
         status: "success",
@@ -49,7 +48,6 @@ class FinancesHandler {
       const { id } = request.params;
       
       const finance = await this._service.getFinanceById(id);
-      console.log(finance);
       return {
         status: "success",
         data: {

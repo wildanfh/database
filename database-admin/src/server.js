@@ -32,6 +32,15 @@ const init = async () => {
     },
   });
 
+  server.state('cookie', {
+    ttl: 1000*60*60*24,
+    isSecure: false,
+    isHttpOnly: true,
+    encoding: 'base64json',
+    clearInvalid: false,
+    strictHeader: true
+  });
+
   await server.register([
     {
       plugin: users,
